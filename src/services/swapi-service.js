@@ -40,10 +40,9 @@ export default class SwapiService {
     return this._transformStarship(starship);
   }
 
-  // regExp take number of the planet in property API (url:"https://swapi.dev/api/planets/24/") //24
   _extractId(item) {
     const idRegExp = /\/([0-9]*)\/$/;
-    return item.url.match(idRegExp)[1]; // group 0 => /24/, group 1 => 24 between ()
+    return item.url.match(idRegExp)[1];
   }
 
   _transformPlanet(planet) {
